@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | panyu-博客</title>
+  <title>JS+AJAX实现智能聊天机器人 | panyu-博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="分析页面1.拆解网页： 3块–标题区,对话区,输入区html-网页骨架 标题区：一个div加内容h2对话区：一个大div,包含一堆小元素–列表展示 输入区：一个输入框+按钮，输入框需要输入多行文本(可换行)，用textarea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/05/24/hello-world/index.html">
+<meta property="og:title" content="JS+AJAX实现智能聊天机器人">
+<meta property="og:url" content="http://yoursite.com/2020/05/29/JS-AJAX%E5%AE%9E%E7%8E%B0%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA/index.html">
 <meta property="og:site_name" content="panyu-博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="分析页面1.拆解网页： 3块–标题区,对话区,输入区html-网页骨架 标题区：一个div加内容h2对话区：一个大div,包含一堆小元素–列表展示 输入区：一个输入框+按钮，输入框需要输入多行文本(可换行)，用textarea">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-23T17:22:25.252Z">
-<meta property="article:modified_time" content="2020-05-23T17:22:25.252Z">
+<meta property="article:published_time" content="2020-05-28T17:01:28.000Z">
+<meta property="article:modified_time" content="2020-05-28T17:25:48.295Z">
 <meta property="article:author" content="panyu">
+<meta property="article:tag" content="AJAX JS">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="panyu-博客" type="application/atom+xml">
@@ -150,39 +151,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JS-AJAX实现智能聊天机器人" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      JS+AJAX实现智能聊天机器人
     </h1>
   
 
         
-        <a href="/2020/05/24/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-23T17:22:25.252Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
+        <a href="/2020/05/29/JS-AJAX%E5%AE%9E%E7%8E%B0%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="archive-article-date">
+  	<time datetime="2020-05-28T17:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h3 id="分析页面"><a href="#分析页面" class="headerlink" title="分析页面"></a>分析页面</h3><p>1.<strong>拆解网页</strong>：</p>
+<p>3块–标题区,对话区,输入区<br>html-网页骨架</p>
+<p><strong>标题区</strong>：一个div加内容h2<br><strong>对话区</strong>：一个大div,包含一堆小元素–列表展示</p>
+<p><strong>输入区</strong>：一个输入框+按钮，输入框需要输入多行文本(可换行)，用textarea</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p><strong>2.布局+样式美化</strong><br>整体区域：设定全部元素的padding和margin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* 初始化 *&#x2F;</span><br><span class="line">        * &#123;</span><br><span class="line">        margin: 0;</span><br><span class="line">        padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;* 标题区：居中</span><br><span class="line">        对话区：分左右 *&#x2F;</span><br><span class="line"></span><br><span class="line">        .message-list__item-robot,</span><br><span class="line">        .message-list__item-user &#123;</span><br><span class="line">        margin-bottom: 10px;</span><br><span class="line">        display: flex;</span><br><span class="line">        &#125;</span><br><span class="line">        .message-list__item-user &#123;</span><br><span class="line">        flex-direction: row-reverse;</span><br><span class="line">        &#x2F;* 以相反顺序，等同于justify-content:flex-end; *&#x2F;</span><br><span class="line">        &#125;</span><br><span class="line">        .send-message textarea &#123;</span><br><span class="line">        flex-grow: 1;</span><br><span class="line">        &#x2F;* flex-grow的默认值为0，意思是该元素不索取父元素的剩余空间，如果值大于0，表示索取。值越大，索取的越厉害</span><br><span class="line">        flex-grow、flex-shrink、flex-basis三个属性的作用：</span><br><span class="line">        在flex布局中，父元素在不同宽度下，子元素是如何分配父元素空间的。 *&#x2F;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="机器人自动回复"><a href="#机器人自动回复" class="headerlink" title="机器人自动回复"></a>机器人自动回复</h4><p><strong>将机器人按功能分</strong>：消息列表(机器人消息,自己消息),输入框,发送<br><strong>1.工作流程</strong>：输入消息，点击发送，发送用户消息，发送机器人消息<br>点击发送时：监听click事件，得输入框内容<br>发送用户消息：创建一个气泡节点(li),在li中写你要发送的内容，将此节点添加到页面<br>第四步同第三步<br><strong>2.获取输入信息–数组,数据的集合</strong><br>监听发送按钮的点击事件<br>1)找到输入框<br>2)获得里面的消息,value属性<br>3)alert到屏幕上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var a&#x3D;document.getElementsByTagName(&#39;textarea&#39;)[0];&#x2F;&#x2F;获取输入框</span><br><span class="line">            var b&#x3D;document.getElementsByTagName(&#39;button&#39;)[0];&#x2F;&#x2F;获取按钮</span><br><span class="line">            &#x2F;&#x2F;事件监听</span><br><span class="line">            b.onclick&#x3D;function(e)&#123;</span><br><span class="line">            var kk&#x3D; a.value;&#x2F;&#x2F;获取输入文本</span><br><span class="line">            a.innerText&#x3D;&#39;&#39;; &#x2F;&#x2F;清空文本框内容</span><br><span class="line">            alert(kk); &#x2F;&#x2F;打印获取后的内容</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 也可以写成addEventListener格式</span><br><span class="line">            b.addEventListener(&#39;click&#39;, function(e) &#123;</span><br><span class="line">                var kk &#x3D; a.value;</span><br><span class="line">                inputArea.value &#x3D; &#39;&#39;</span><br><span class="line">                alert(kk)</span><br><span class="line">            &#125;)</span><br><span class="line">            &#x2F;&#x2F; 注：除了id选择器,class与tag选择器每次都是选一堆元素--数组，所以使用时加上索引[0]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p><strong>3.发送输入消息(用户发送信息)</strong>【重难点】<br>1)创建ul的子节点li,加类名className;<br>2)创建li的子节点div，innerText属性放内容<br>3)子节点添加到父节点，li.appendChild.div ul.appendChild.li</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var li &#x3D; document.createElement(&#39;li&#39;);&#x2F;&#x2F;创建节点</span><br><span class="line">            li.className &#x3D; &#39;message-list__item message-list__item-user&#39;;&#x2F;&#x2F;加类名</span><br><span class="line">            var childNode &#x3D; document.createElement(&#39;div&#39;); &#x2F;&#x2F;创建div节点，里面用来写内容</span><br><span class="line">            childNode.innerText &#x3D; userMsg;&#x2F;&#x2F;添加内容</span><br><span class="line">            li.appendChild(childNode)&#x2F;&#x2F;添加子节点到li</span><br><span class="line"></span><br><span class="line">            var msgList &#x3D; document.getElementsByClassName(&#39;message-list&#39;)[0];</span><br><span class="line">            msgList.appendChild(li);&#x2F;&#x2F;将li节点添加到消息列表！</span><br><span class="line">            &#125;)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p><strong>4.获取机器人消息–数组</strong><br>Math.random()是随机函数，可以随机一个0-1之间的数字【0,1)<br>Math.floor()是取整函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var data &#x3D; [</span><br><span class="line">                &#39;我是小二黑，你好啊&#39;,</span><br><span class="line">                &#39;今天天气不错哎&#39;,</span><br><span class="line">                &#39;手机快没电了，回聊呗&#39;,</span><br><span class="line">                &#39;我去洗澡了，待会聊呗&#39;,</span><br><span class="line">                &#39;惊不惊喜，意不意外，刺不刺激？&#39;</span><br><span class="line">                ]</span><br><span class="line">                var randomNumber &#x3D; Math.floor(Math.random() * 5)</span><br><span class="line">                var robotMsg &#x3D; data[randomNumber]</span><br><span class="line">                &#x2F;&#x2F;console.log(robotMsg)</span><br><span class="line">                &#x2F;&#x2F;显示机器人信息-同发送信息，只是类名不同</span><br><span class="line">                var li &#x3D; document.createElement(&#39;li&#39;);</span><br><span class="line">                    li.className &#x3D; &#39;message-list__item message-list__item-robot&#39;</span><br><span class="line">                    var childNode &#x3D; document.createElement(&#39;div&#39;)</span><br><span class="line">                    childNode.innerText &#x3D; robotMsg</span><br><span class="line">                    li.appendChild(childNode)</span><br><span class="line">                    var msgList &#x3D; document.getElementsByClassName(&#39;message-list&#39;)[0];</span><br><span class="line">                    msgList.appendChild(li);</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.函数优化</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;封装成函数，两个参数来区分发送信息与机器人信息</span><br><span class="line">function sendMsg(msg, className) &#123;</span><br><span class="line">  var li &#x3D; document.createElement(&#39;li&#39;);</span><br><span class="line">  li.className &#x3D; className</span><br><span class="line">  var childNode &#x3D; document.createElement(&#39;div&#39;)</span><br><span class="line">  childNode.innerText &#x3D; msg</span><br><span class="line">  li.appendChild(childNode)</span><br><span class="line">  msgList.appendChild(li);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 监听发送按钮点击事件</span><br><span class="line">sendMsgButton.addEventListener(&#39;click&#39;, function() &#123;</span><br><span class="line">  &#x2F;&#x2F; 获取输入框的内容</span><br><span class="line">  var userMsg &#x3D; inputArea.value;</span><br><span class="line">  &#x2F;&#x2F; 清空输入框</span><br><span class="line">  inputArea.value &#x3D; &#39;&#39;</span><br><span class="line">  &#x2F;&#x2F; 发送用户消息</span><br><span class="line">  sendMsg(userMsg, &#39;message-list__item message-list__item-user&#39;)</span><br><span class="line">  </span><br><span class="line">  &#x2F;&#x2F; 生成机器人的随机回复消息</span><br><span class="line">  var randomNumber &#x3D; Math.floor(Math.random() * 4)</span><br><span class="line">  var robotMsg &#x3D; data[randomNumber]</span><br><span class="line">  &#x2F;&#x2F; 发送机器人的消息</span><br><span class="line">  sendMsg(robotMsg, &#39;message-list__item message-list__item-robot&#39;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h4 id="前后端通信–AJAX"><a href="#前后端通信–AJAX" class="headerlink" title="前后端通信–AJAX"></a>前后端通信–AJAX</h4></li>
+<li></li>
+</ul>
+<p>http（HyperText Transfer Protocol）协议，中文名称超文本传输协议<br>协议:共同制定的规则–语言<br>协议定义了传输信息的格式，信息所表示的具体的含义<br>1.前端给后端发送的信息叫做请求报文，HTTP request<br>2.后端回复前端的信息叫做响应报文，HTTP response<br>http协议最主要的内容就是定义了请求报文和响应报文的格式以及各个字段的含义<br><strong>请求报文</strong>：请求行，首部字段，消息体<br>其中<strong>请求行:</strong>请求方法 请求地址 协议版本,前两种比较重要<br>请求方法：<br><strong>1.GET</strong><br><strong>2.POST</strong><br><strong>3.PUT</strong><br><strong>4.DELETE</strong><br>消息体和首部字段之间通过一个空行分隔开来<br>3<strong>.响应报文</strong><br>状态行也是由三个字段通过空格分隔构成的，依次是：协议版本、状态码、状态码对应的文本描述;前端就是根据状态码来判断本次请求是否成功!</p>
+<h4 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h4><ul>
+<li><p><strong>Ajax</strong>（Asynchronous JavaScript and XML）异步 JavaScript 和 XML<br>Asynchronous异步<br>JavaScript浏览器给予了 Javascript 主动发起网络请求的能力<br>XML（Extensible Markup Language）–可扩展标记语言<br>Ajax是一系列技术的集合<br><strong>2.Ajax具体实现</strong><br>浏览器赋予Javascript主动发送网络请求的能力,赋予途径： XMLHttpRequest构造函数：JS主动发起http请求，从而与服务器之间通过http协议来达到相互通信的目的<br><strong>３.XMLHttpRequest(XML(早期数据格式)+HttpRequest（</strong>请求报文）)<br>1)JS发起一个http请求，先new一个XHR对象<br>var xhr = new XMLHttpRequest();</p>
+</li>
+<li><p>2)利用open方法”打开”此xhr对象<br>xhr.open(‘GET’,’<a href="http://www.baicn' target=" _blank" rel="noopener" ">http://www.baicn’</a>)<br>open方法接受三个参数，仅前两个用的多<br>11)method:http请求类型<br>12)url:请求地址<br>13)是否为异步请求–async<br>注：类比请求报文中的字段<br>调用了 open 方法之后并不会真正发送请求，而只是启动一个请求以备发送。</p>
+</li>
+<li><p>3)send方法接受将要发送给服务器的信息–请求报文中的消息体<br>打开浏览器的控制台<br>tab切换到Network<br>切换子tab为XHR,查看此网页发送的所有的网络请求<br>再切换到Response tab,服务器返回的响应报文中消息体所包含的信息</p>
+</li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建一个XHR对象</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">&#x2F;&#x2F; 打开XHR对象，</span><br><span class="line">xhr.open(&#39;POST&#39;, &#39;http:&#x2F;&#x2F;yapi.demo.qunar.com&#x2F;mock&#x2F;63071&#x2F;helloworld&#39;);</span><br><span class="line">&#x2F;&#x2F; 发送http请求</span><br><span class="line">xhr.send(&#39;hello&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>4)获取服务器返回的数据<br>xhr对象的三个属性<br>1.responseText：保存了服务器返回的数据<br>2.status：服务器响应报文的状态码<br>3.readyState：表示当前 XHR 对象请求/响应过程的当前活动阶段，这个属性有以下一些取值：(0-4)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建一个XHR对象</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">console.log(&#39;刚刚创建的XHR对象：&#39;, xhr.readyState);&#x2F;&#x2F;0</span><br><span class="line">&#x2F;&#x2F; 打开XHR对象，</span><br><span class="line">xhr.open(&#39;POST&#39;, &#39;http:&#x2F;&#x2F;yapi.demo.qunar.com&#x2F;mock&#x2F;63071&#x2F;helloworld&#39;);</span><br><span class="line">console.log(&#39;调用open函数后的XHR对象：&#39;, xhr.readyState);&#x2F;&#x2F;1</span><br><span class="line">&#x2F;&#x2F; 设定XHR对象的onreadystatechange属性</span><br><span class="line">xhr.onreadystatechange &#x3D; function() &#123;</span><br><span class="line">  console.log(&#39;调用send函数后的XHR对象：&#39;, xhr.readyState);&#x2F;&#x2F;2,3,4</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 发送http请求</span><br><span class="line">xhr.send(&#39;hello&#39;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中onreadystatechange属性，给它赋值了一个函数，决定我们能获取到服务器数据</li>
+<li>每当XHR对象的readyState属性发生改变时，如果onreadystatechange属性是一个函数，那么浏览器都会运行这个函数</li>
+<li>每当XHR对象的readyState属性发生改变时，如果onreadystatechange属性是一个函数，那么浏览器都会运行这个函数</li>
+<li>服务器的响应数据又是存放于xhr对象的responseText属性<br>即：在readyState属性变为4的时候访问responseText属性，就能获取到服务器的响应数据</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 创建一个XHR对象</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">console.log(&#39;刚刚创建的XHR对象：&#39;, xhr.readyState);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打开XHR对象，</span><br><span class="line">xhr.open(&#39;POST&#39;, &#39;http:&#x2F;&#x2F;yapi.demo.qunar.com&#x2F;mock&#x2F;63071&#x2F;helloworld&#39;);</span><br><span class="line">console.log(&#39;调用open函数后的XHR对象：&#39;, xhr.readyState);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 设定XHR对象的onreadystatechange属性</span><br><span class="line">xhr.onreadystatechange &#x3D; function() &#123;</span><br><span class="line">  console.log(&#39;调用send函数后的XHR对象：&#39;, xhr.readyState);</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 浏览器接收完成服务器数据(新增)</span><br><span class="line">  if (xhr.readyState &#x3D;&#x3D;&#x3D; 4) &#123;</span><br><span class="line">    &#x2F;&#x2F; 判断响应报文状态码的有效性</span><br><span class="line">    if (200 &lt;&#x3D; xhr.status &lt; 300 || xhr.status &#x3D;&#x3D;&#x3D; 304) &#123;</span><br><span class="line">      console.log(&#39;接收到服务器数据：&#39;, xhr.responseText);&#x2F;&#x2F;获取响应数据</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 发送http请求</span><br><span class="line">xhr.send(&#39;hello&#39;);</span><br><span class="line"></span><br><span class="line">【输出】</span><br><span class="line">刚刚创建的XHR对象：0</span><br><span class="line">调用open函数后的XHR对象：1</span><br><span class="line">调用send函数后的XHR对象：2</span><br><span class="line">调用send函数后的XHR对象：3</span><br><span class="line">调用send函数后的XHR对象：4</span><br><span class="line">接收到服务器数据：Hello World!</span><br></pre></td></tr></table></figure>
+
+<h4 id="利用AJAX打造机器人"><a href="#利用AJAX打造机器人" class="headerlink" title="利用AJAX打造机器人"></a>利用AJAX打造机器人</h4><p>你给服务端说了hello(通过xhr.send(‘hello’)),服务端则给你回复了hello world</p>
+<h4 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h4><p>1.最常见的是get请求，其次是post请求<br>2.get请求直接通过URL来给服务端发消息，也就是消息被一起拼接在URL里;post请求，约定通过content来传递消息，也就是XHR.send()括号里的内容<br>3.get请求(中文：获得)一般都是获取数据的请求,我需要一本xx书，服务端把这本书拿来给你，把xx拼在url里就好了;post（中文：发布）一般是，告诉服务端，我需要给你一本书，让你放在你的书架上,放在url中不安全，故选择放在请求的body里发送（也就是xhr.send()括号里的东西）<br>4.xhr.open(‘GET’, ‘<a href="http://wang.norma.shop:8080/api.php?key=free&amp;appid=0&amp;msg=&#39;+msg);表示，给服务端发送了一条get请求，传输了一个msg，msg的值是hello" target="_blank" rel="noopener">http://wang.norma.shop:8080/api.php?key=free&amp;appid=0&amp;msg=&#39;+msg);表示，给服务端发送了一条get请求，传输了一个msg，msg的值是hello</a><br>5.具体什么请求，看接口文档</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var msg &#x3D; &#39;hello&#39;</span><br><span class="line">&#x2F;&#x2F; 创建一个XHR对象</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">console.log(&#39;刚刚创建的XHR对象：&#39;, xhr.readyState);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 打开XHR对象，</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;http:&#x2F;&#x2F;wang.norma.shop:8080&#x2F;api.php?key&#x3D;free&amp;appid&#x3D;0&amp;msg&#x3D;&#39;+msg);</span><br><span class="line">console.log(&#39;调用open函数后的XHR对象：&#39;, xhr.readyState);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 设定XHR对象的onreadystatechange属性</span><br><span class="line">xhr.onreadystatechange &#x3D; function() &#123;</span><br><span class="line">  console.log(&#39;调用send函数后的XHR对象：&#39;, xhr.readyState);</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 浏览器接收完成服务器数据</span><br><span class="line">  if (xhr.readyState &#x3D;&#x3D;&#x3D; 4) &#123;</span><br><span class="line">    &#x2F;&#x2F; 响应状态码有效</span><br><span class="line">    if (200 &lt;&#x3D; xhr.status &lt; 300 || xhr.status &#x3D;&#x3D;&#x3D; 304) &#123;</span><br><span class="line">      console.log(&#39;接收到服务器数据：&#39;, xhr.responseText);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 发送http请求</span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<h4 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h4><p>机器人采用的是get请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;封装成函数使用</span><br><span class="line"></span><br><span class="line">function ajax(method, url, data, cb) &#123;</span><br><span class="line">  &#x2F;&#x2F; 默认请求方式为 GET</span><br><span class="line">  method &#x3D; method || &quot;GET&quot;;</span><br><span class="line">  data &#x3D; data || null;</span><br><span class="line"></span><br><span class="line">  if (!url) &#123;</span><br><span class="line">    throw new Error(&quot;必须指定 url 参数&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#x2F;&#x2F;之前内容</span><br><span class="line">  var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">  xhr.open(method, url);</span><br><span class="line">  xhr.onreadystatechange &#x3D; function() &#123;</span><br><span class="line">    &#x2F;&#x2F; readyState 为 4 时表示已经全部接收到响应数据</span><br><span class="line">    if (xhr.readyState &#x3D;&#x3D;&#x3D; 4) &#123;</span><br><span class="line">      &#x2F;&#x2F; Http 状态码大于等于 200 小于 300，或者等于 304，表示请求成功</span><br><span class="line">      if ((xhr.status &gt;&#x3D; 200 &amp;&amp; xhr.status &lt; 300) || xhr.status &#x3D;&#x3D;&#x3D; 304) &#123;</span><br><span class="line">        cb(xhr.responseText);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        cb(null);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  xhr.send(data);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;使用时</span><br><span class="line">var msg &#x3D; &#39;hello&#39;</span><br><span class="line">ajax(&#39;GET&#39;, &#39;http:&#x2F;&#x2F;wang.norma.shop:8080&#x2F;api.php?key&#x3D;free&amp;appid&#x3D;0&amp;msg&#x3D;&#39;+msg, null,function success(response)&#123;console.log(response)&#125;)</span><br><span class="line">【结果】</span><br><span class="line">&#123;&quot;result&quot;:0,&quot;content&quot;:&quot;&#123;face:14&#125;Hi~&quot;&#125;</span><br><span class="line">&#123;&quot;result&quot;:0,&quot;content&quot;:&quot;Nice to meet you&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>ajax这个函数可以传入一个函数(此函数即为回调函数)作为参数，在ajax函数执行后，调用这个函数给你消息</strong></p>
 
       
 
@@ -212,6 +258,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">AJAX JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -262,7 +319,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/24/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/29/JS-AJAX%E5%AE%9E%E7%8E%B0%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,15 +333,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/28/ES6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ES6
-        
-      </div>
-    </a>
   
+    <a href="/2020/05/28/vue1-0-%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue1.0--模板语法</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -413,6 +466,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AJAX JS</a>
               </li>
             
             <div class="clearfix"></div>
